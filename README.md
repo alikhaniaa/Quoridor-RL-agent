@@ -4,7 +4,7 @@ This repository contains a simple implementation of the board game **Quoridor** 
 
 ## Playing the Game
 
-Run the CLI in two–player mode:
+Run the CLI in two-player mode:
 
 ```bash
 python cli.py
@@ -16,13 +16,20 @@ Run the CLI against a random opponent:
 python cli.py --ai
 ```
 
-Moves are entered in the format:
+Moves are entered using a simpler syntax:
 
-- `m row col` – move your pawn to a cell
-- `wh row col` – place a horizontal wall with its top‑left corner at `row`, `col`
-- `wv row col` – place a vertical wall with its top‑left corner at `row`, `col`
+- `move ROW COL` – move your pawn to a cell
+- `wall h ROW COL` – place a horizontal wall with its top-left corner at `(ROW, COL)`
+- `wall v ROW COL` – place a vertical wall with its top-left corner at `(ROW, COL)`
 
-Rows and columns are 0‑indexed.
+Rows and columns are 0-indexed.
+
+Alternatively you can use a basic GUI:
+
+```bash
+python gui.py            # human vs. human
+python gui.py --ai       # play against the random AI
+```
 
 ## Using the Environment
 
